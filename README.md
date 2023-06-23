@@ -34,16 +34,24 @@ strncpy(&addr[strlen(addr)], data, max_length);
 Yine fd kullanarak bu alana direk yazip buradan direk okuma islemide yapabilirsiniz.
 ##### singleshell.c yi asagidaki sekilde tamamlamaniz istenmektedir:
 -system(), kullanmayiniz!!!! exec fonksiyonları ve fork kullanmaniz istenmektedir.
+
 -Program tum shelldeki stdout ve stderrleri ayrica addr'e yazmalıdır (sonlarina \n koyarak yazin).
--Ekleme: Bu kisimda sadece shelle yazilan komutlar, yani execle calistirilacak komut, execin outputunu addr’e yazmaniza gerek yok
+
+-Ekleme: Bu kisimda sadece shelle yazilan komutlar, yani execle calistirilacak komut, execin outputunu addr’e yazmaniza gerek yok.
 yani hem shellde gorulecek, hem dosyaya yazılacak (log gibi düşünebilirsiniz)
 -Dosyaya yazarken başlarına kendi process id sini eklemelidir.
--Program calismaya basladiginda kendi process id sini ve parent process id sini ve calismaya baslama tarih, ay, gun, ve saatini dosyaya yazdirmalidir
+
+-Program calismaya basladiginda kendi process id sini ve parent process id sini ve calismaya baslama tarih, ay, gun, ve saatini dosyaya yazdirmalidir.
+
 -exit verildiğinde calismayi sonlandirmali, sonlandirma isleminden once yine bitis tarih, ay, gun, saatini yazdırmalı.
+
 -ls vb komutlar verildiğinde bunlari normal shelldeki gibi calistirmali. shell programın bitmesini beklemeli, sonra calismasina devam etmeli.
+
 -current directorydeki ve baska bir directoryde program ismi verildiğinde onlarida calistirabilmeli
 mesela, ./directory1/directory2/programname
+
 -Yine verilen argümanları da uygun sekilde yönlendirmeli.
+
 -Cikarken tum file descriptorlari vesaire kapamalidir. Yine kullandiginiz tum systemcallarinda hata kontrolu yapmanız istenmektedir.
 #### multishell
 Verilen sayida singleshell program instance'i olusturmaktadir. Mesela
