@@ -1,4 +1,4 @@
-# system-programming-project-threads
+###### system-programming-project1
 ## Project-1: A Communicating Multi-shell (Part-1: intro, shared file)
 ### Bilinmesi gerekenler
 C system calls
